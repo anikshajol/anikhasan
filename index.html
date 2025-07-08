@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      MD Anik Hasan - Full Stack Developer & Digital Marketing Expert
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb",
+              "primary-dark": "#1d4ed8",
+              "primary-light": "#3b82f6",
+              accent: "#06b6d4",
+              "accent-light": "#67e8f9",
+            },
+            animation: {
+              "fade-in-up": "fadeInUp 0.6s ease-out",
+              "slide-in": "slideIn 0.8s ease-out",
+              "bounce-slow": "bounce 3s infinite",
+              "pulse-slow": "pulse 4s infinite",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <!-- Dark Mode Toggle Script -->
+    <script>
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        document.documentElement.classList.add("dark");
+      }
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (event.matches) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+        });
+    </script>
+
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-lg transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="text-2xl font-bold text-gradient">MD Anik Hasan</div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="hover:text-primary font-bold transition-colors duration-300 relative group"
+            >
+              Home
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#about"
+              class="hover:text-primary transition-colors duration-300 relative group"
+            >
+              About
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#skills"
+              class="hover:text-primary transition-colors duration-300 relative group"
+            >
+              Skills
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#portfolio"
+              class="hover:text-primary transition-colors duration-300 relative group"
+            >
+              Portfolio
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#services"
+              class="hover:text-primary transition-colors duration-300 relative group"
+            >
+              Services
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#blog"
+              class="hover:text-primary transition-colors duration-300 relative group"
+            >
+              Blog
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#contact"
+              class="hover:text-primary transition-colors duration-300 relative group"
+            >
+              Contact
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+          </div>
+          <button id="mobile-menu-btn" class="md:hidden">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg"
+      >
+        <div class="px-4 py-2 space-y-2">
+          <a
+            href="#home"
+            class="block hover:text-primary transition-colors py-2"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block hover:text-primary transition-colors py-2"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="block hover:text-primary transition-colors py-2"
+            >Skills</a
+          >
+          <a
+            href="#portfolio"
+            class="block hover:text-primary transition-colors py-2"
+            >Portfolio</a
+          >
+          <a
+            href="#services"
+            class="block hover:text-primary transition-colors py-2"
+            >Services</a
+          >
+          <a
+            href="#blog"
+            class="block hover:text-primary transition-colors py-2"
+            >Blog</a
+          >
+          <a
+            href="#contact"
+            class="block hover:text-primary transition-colors py-2"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center gradient-bg relative overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-black/20"></div>
+      <!-- Animated Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full animate-pulse-slow"
+        ></div>
+        <div
+          class="absolute top-1/2 -left-20 w-60 h-60 bg-white/5 rounded-full animate-bounce-slow"
+        ></div>
+        <div
+          class="absolute bottom-10 right-1/4 w-20 h-20 bg-white/20 rounded-full animate-ping"
+        ></div>
+        <div
+          class="absolute top-1/4 left-1/4 w-32 h-32 bg-white/5 rounded-full animate-pulse"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white"
+      >
+        <div class="space-y-8 animate-fade-in-up">
+          <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+            <span class="block">MD Anik Hasan</span>
+            <span class="text-2xl md:text-3xl font-normal opacity-90"
+              >(Anik Shajol)</span
+            >
+          </h1>
+          <div class="text-xl md:text-2xl h-8 overflow-hidden">
+            <p id="typing-text" class="typing-animation">
+              Full Stack Developer & Digital Marketing Expert
+            </p>
+          </div>
+          <p
+            class="text-lg md:text-xl max-w-3xl mx-auto opacity-90 leading-relaxed"
+          >
+            Passionate Full Stack Developer, Meta Ads Expert, AI Prompt
+            Specialist, and Digital Marketing Professional. Creating innovative
+            solutions with modern technology to drive business growth.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <a
+              href="#portfolio"
+              class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg"
+            >
+              View My Work
+            </a>
+            <a
+              href="#contact"
+              class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary hover:scale-105 transition-all duration-300"
+            >
+              Get In Touch
+            </a>
+          </div>
+          <!-- Social Links -->
+          <div class="flex justify-center space-x-6 mt-8">
+            <a
+              href="https://www.facebook.com/anikshajol/"
+              target="_blank"
+              class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-all duration-300 hover:scale-110"
+            >
+              <i class="fab fa-facebook text-xl"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/anikshajol/"
+              target="_blank"
+              class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-all duration-300 hover:scale-110"
+            >
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a
+              href="#"
+              id="linkedin-link"
+              class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-all duration-300 hover:scale-110"
+            >
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a
+              href="mailto:anikshajol@gmail.com"
+              class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-all duration-300 hover:scale-110"
+            >
+              <i class="fas fa-envelope text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            About Me
+          </h2>
+          <div class="w-24 h-1 bg-primary mx-auto"></div>
+          <p class="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+            Learn more about my journey, skills, and passion for technology
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6 animate-slide-in">
+            <h3 class="text-2xl font-semibold text-primary">
+              Professional Overview
+            </h3>
+            <p class="text-lg leading-relaxed">
+              I'm a skilled Full Stack Web Developer with expertise in modern
+              technologies like React, Node.js, MongoDB, and other cutting-edge
+              tools. I create dynamic websites and applications that deliver
+              exceptional user experiences.
+            </p>
+            <p class="text-lg leading-relaxed">
+              My expertise extends to Digital Marketing, specializing in Meta
+              Ads, Content Writing, Social Media Management, and AI Prompt
+              Engineering. I help businesses achieve their goals through
+              strategic digital solutions.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mt-6">
+              <div class="text-center p-4 bg-primary/5 rounded-lg">
+                <div class="text-2xl font-bold text-primary">3+</div>
+                <div class="text-sm text-gray-600 dark:text-gray-400">
+                  Years Experience
+                </div>
+              </div>
+              <div class="text-center p-4 bg-accent/5 rounded-lg">
+                <div class="text-2xl font-bold text-accent">50+</div>
+                <div class="text-sm text-gray-600 dark:text-gray-400">
+                  Projects Completed
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"
+                >Full Stack Development</span
+              >
+              <span
+                class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"
+                >Meta Ads Expert</span
+              >
+              <span
+                class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"
+                >AI Prompt Engineering</span
+              >
+              <span
+                class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"
+                >Content Writing</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-2xl"
+          >
+            <h4 class="text-xl font-semibold mb-6">Contact Information</h4>
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <i class="fab fa-whatsapp text-green-500 text-xl"></i>
+                <div>
+                  <div class="font-medium">WhatsApp</div>
+                  <a
+                    href="https://wa.me/8801611020002"
+                    target="_blank"
+                    class="text-primary hover:underline"
+                    >+880 1611 020002</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-envelope text-primary text-xl"></i>
+                <div>
+                  <div class="font-medium">Email</div>
+                  <a
+                    href="mailto:anikshajol@gmail.com"
+                    class="text-primary hover:underline"
+                    >anikshajol@gmail.com</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fab fa-facebook text-blue-600 text-xl"></i>
+                <div>
+                  <div class="font-medium">Facebook</div>
+                  <a
+                    href="https://www.facebook.com/anikshajol/"
+                    target="_blank"
+                    class="text-primary hover:underline"
+                  >
+                    facebook.com/anikshajol
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fab fa-instagram text-pink-500 text-xl"></i>
+                <div>
+                  <div class="font-medium">Instagram</div>
+                  <a
+                    href="https://www.instagram.com/anikshajol/"
+                    target="_blank"
+                    class="text-primary hover:underline"
+                  >
+                    instagram.com/anikshajol
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fab fa-linkedin text-blue-700 text-xl"></i>
+                <div>
+                  <div class="font-medium">LinkedIn</div>
+                  <button
+                    onclick="addLinkedIn()"
+                    class="text-gray-500 hover:text-primary transition-colors"
+                  >
+                    Add LinkedIn Profile
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            My Skills
+          </h2>
+          <div class="w-24 h-1 bg-primary mx-auto"></div>
+          <p class="text-gray-600 dark:text-gray-400 mt-4">
+            Technologies and tools I work with
+          </p>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+          <div>
+            <h3 class="text-2xl font-semibold mb-6">Technical Skills</h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">React.js</span>
+                  <span class="text-primary">95%</span>
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-primary h-2 rounded-full skills-progress"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Node.js</span>
+                  <span class="text-primary">90%</span>
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-primary h-2 rounded-full skills-progress"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">MongoDB</span>
+                  <span class="text-primary">85%</span>
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-primary h-2 rounded-full skills-progress"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">JavaScript</span>
+                  <span class="text-primary">92%</span>
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-primary h-2 rounded-full skills-progress"
+                    style="width: 92%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Python</span>
+                  <span class="text-primary">80%</span>
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-primary h-2 rounded-full skills-progress"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold mb-6">Marketing Skills</h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Meta Ads</span>
+                  <span class="text-accent">98%</span>
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-accent h-2 rounded-full skills-progress"
+                    style="width: 98%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Content Writing</span>
+                  <span class="text-accent">95%</span>
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-accent h-2 rounded-full skills-progress"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">AI Prompt Engineering</span>
+                  <span class="text-accent">90%</span>
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-accent h-2 rounded-full skills-progress"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Social Media Management</span>
+                  <span class="text-accent">93%</span>
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-accent h-2 rounded-full skills-progress"
+                    style="width: 93%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">SEO Optimization</span>
+                  <span class="text-accent">87%</span>
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-accent h-2 rounded-full skills-progress"
+                    style="width: 87%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Categories -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg card-hover"
+          >
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-code text-primary text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Web Development</h3>
+              <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-400">
+                <li>React.js & Next.js</li>
+                <li>Node.js & Express</li>
+                <li>MongoDB & MySQL</li>
+                <li>REST APIs & GraphQL</li>
+                <li>AWS & Docker</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg card-hover"
+          >
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fab fa-facebook text-accent text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Meta Advertising</h3>
+              <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-400">
+                <li>Facebook & Instagram Ads</li>
+                <li>Campaign Optimization</li>
+                <li>Audience Research</li>
+                <li>A/B Testing</li>
+                <li>ROI Analysis</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg card-hover"
+          >
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-robot text-purple-600 text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">AI & Automation</h3>
+              <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-400">
+                <li>AI Prompt Engineering</li>
+                <li>ChatGPT Integration</li>
+                <li>Workflow Automation</li>
+                <li>Content Generation</li>
+                <li>Machine Learning</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg card-hover"
+          >
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-share-alt text-green-600 text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Digital Marketing</h3>
+              <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-400">
+                <li>Social Media Strategy</li>
+                <li>Content Marketing</li>
+                <li>SEO & SEM</li>
+                <li>Email Marketing</li>
+                <li>Analytics & Reporting</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            My Portfolio
+          </h2>
+          <div class="w-24 h-1 bg-primary mx-auto"></div>
+          <p class="text-gray-600 dark:text-gray-400 mt-4">
+            Showcase of my recent projects and achievements
+          </p>
+        </div>
+
+        <!-- Portfolio Controls -->
+        <div class="flex flex-wrap justify-center mb-8 space-x-4">
+          <button
+            class="portfolio-tab active bg-primary text-white px-6 py-2 rounded-full mb-2"
+            data-category="all"
+          >
+            All Projects
+          </button>
+          <button
+            class="portfolio-tab bg-gray-200 dark:bg-gray-700 px-6 py-2 rounded-full mb-2"
+            data-category="websites"
+          >
+            Websites
+          </button>
+          <button
+            class="portfolio-tab bg-gray-200 dark:bg-gray-700 px-6 py-2 rounded-full mb-2"
+            data-category="meta-ads"
+          >
+            Meta Ads
+          </button>
+          <button
+            class="portfolio-tab bg-gray-200 dark:bg-gray-700 px-6 py-2 rounded-full mb-2"
+            data-category="ai-work"
+          >
+            AI Projects
+          </button>
+        </div>
+
+        <!-- Add Project Button -->
+        <div class="text-center mb-8">
+          <button
+            onclick="showAddProjectModal()"
+            class="bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent/90 transition-colors"
+          >
+            <i class="fas fa-plus mr-2"></i>Add New Project
+          </button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="portfolio-grid"
+        >
+          <!-- Projects will be dynamically added here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50 dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            My Services
+          </h2>
+          <div class="w-24 h-1 bg-primary mx-auto"></div>
+          <p class="text-gray-600 dark:text-gray-400 mt-4">
+            Comprehensive digital solutions for your business needs
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg card-hover group"
+          >
+            <div class="text-center">
+              <div
+                class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300"
+              >
+                <i
+                  class="fas fa-globe text-primary group-hover:text-white text-3xl transition-colors duration-300"
+                ></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">Website Development</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-6">
+                Modern, responsive, and SEO-optimized websites that meet your
+                business requirements and drive conversions.
+              </p>
+              <ul class="text-left space-y-2 text-sm">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Responsive
+                  Design
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>SEO
+                  Optimization
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Fast Loading
+                  Speed
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Security
+                  Implementation
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg card-hover group"
+          >
+            <div class="text-center">
+              <div
+                class="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-300"
+              >
+                <i
+                  class="fab fa-facebook text-accent group-hover:text-white text-3xl transition-colors duration-300"
+                ></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">Meta Ads Management</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-6">
+                Strategic Facebook and Instagram advertising campaigns that
+                increase your sales and brand awareness effectively.
+              </p>
+              <ul class="text-left space-y-2 text-sm">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Target
+                  Audience Research
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Creative
+                  Design & Copy
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>A/B Testing
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Performance
+                  Analytics
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg card-hover group"
+          >
+            <div class="text-center">
+              <div
+                class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-robot text-purple-600 group-hover:text-white text-3xl transition-colors duration-300"
+                ></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">AI Solutions</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-6">
+                Cutting-edge AI integration for business automation, content
+                generation, and workflow optimization.
+              </p>
+              <ul class="text-left space-y-2 text-sm">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>AI Chatbots
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Content
+                  Automation
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Prompt
+                  Engineering
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Workflow
+                  Optimization
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg card-hover group"
+          >
+            <div class="text-center">
+              <div
+                class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-share-alt text-green-600 group-hover:text-white text-3xl transition-colors duration-300"
+                ></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">
+                Social Media Management
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-6">
+                Complete social media solutions to strengthen your brand's
+                online presence and engage your audience.
+              </p>
+              <ul class="text-left space-y-2 text-sm">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Content
+                  Strategy
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Community
+                  Management
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Engagement
+                  Growth
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Analytics
+                  Reports
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg card-hover group"
+          >
+            <div class="text-center">
+              <div
+                class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-yellow-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-pen-fancy text-yellow-600 group-hover:text-white text-3xl transition-colors duration-300"
+                ></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">Content Writing</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-6">
+                Engaging and SEO-friendly content that builds strong
+                relationships with your audience and drives results.
+              </p>
+              <ul class="text-left space-y-2 text-sm">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Blog Articles
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Product
+                  Descriptions
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Social Media
+                  Copy
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>SEO Content
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg card-hover group"
+          >
+            <div class="text-center">
+              <div
+                class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-chart-line text-red-600 group-hover:text-white text-3xl transition-colors duration-300"
+                ></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">Digital Consulting</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-6">
+                Strategic digital consulting and guidance to help you achieve
+                your business goals with the right technology.
+              </p>
+              <ul class="text-left space-y-2 text-sm">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Business
+                  Analysis
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Growth
+                  Strategy
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Tech Stack
+                  Selection
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>Performance
+                  Optimization
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Blog Section -->
+    <section id="blog" class="py-20 bg-white dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Blog & Insights
+          </h2>
+          <div class="w-24 h-1 bg-primary mx-auto"></div>
+          <p class="text-gray-600 dark:text-gray-400 mt-4">
+            Latest articles, tutorials, and industry insights
+          </p>
+        </div>
+
+        <!-- Blog Controls -->
+        <div class="flex flex-wrap justify-between items-center mb-8">
+          <div class="flex flex-wrap gap-2 mb-4">
+            <button
+              class="blog-filter active bg-primary text-white px-4 py-2 rounded-full text-sm"
+              data-category="all"
+            >
+              All Posts
+            </button>
+            <button
+              class="blog-filter bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full text-sm"
+              data-category="web-development"
+            >
+              Web Dev
+            </button>
+            <button
+              class="blog-filter bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full text-sm"
+              data-category="digital-marketing"
+            >
+              Marketing
+            </button>
+            <button
+              class="blog-filter bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full text-sm"
+              data-category="ai-technology"
+            >
+              AI Tech
+            </button>
+            <button
+              class="blog-filter bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full text-sm"
+              data-category="tips-tricks"
+            >
+              Tips & Tricks
+            </button>
+          </div>
+          <div class="flex gap-2">
+            <input
+              type="text"
+              id="blog-search"
+              placeholder="Search articles..."
+              class="px-4 py-2 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+            />
+            <button
+              onclick="toggleBlogForm()"
+              class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-accent/90 transition-colors"
+            >
+              <i class="fas fa-plus mr-1"></i>New Post
+            </button>
+          </div>
+        </div>
+
+        <!-- Blog Posts Grid -->
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+          id="blog-posts"
+        >
+          <!-- Blog posts will be dynamically loaded here -->
+        </div>
+
+        <!-- Blog Statistics -->
+        <div class="grid md:grid-cols-4 gap-6 mb-12">
+          <div class="text-center p-6 bg-primary/5 rounded-lg">
+            <div class="text-3xl font-bold text-primary" id="total-posts">
+              0
+            </div>
+            <div class="text-gray-600 dark:text-gray-400">Total Posts</div>
+          </div>
+          <div class="text-center p-6 bg-accent/5 rounded-lg">
+            <div class="text-3xl font-bold text-accent" id="total-views">0</div>
+            <div class="text-gray-600 dark:text-gray-400">Total Views</div>
+          </div>
+          <div class="text-center p-6 bg-green-100 rounded-lg">
+            <div
+              class="text-3xl font-bold text-green-600"
+              id="total-categories"
+            >
+              4
+            </div>
+            <div class="text-gray-600 dark:text-gray-400">Categories</div>
+          </div>
+          <div class="text-center p-6 bg-purple-100 rounded-lg">
+            <div class="text-3xl font-bold text-purple-600" id="this-month">
+              0
+            </div>
+            <div class="text-gray-600 dark:text-gray-400">This Month</div>
+          </div>
+        </div>
+
+        <!-- Enhanced Blog Form -->
+        <div
+          id="blog-form-container"
+          class="hidden max-w-4xl mx-auto bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-2xl shadow-lg"
+        >
+          <h3 class="text-2xl font-semibold mb-6 text-center">
+            Create New Blog Post
+          </h3>
+          <form id="blog-form" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium mb-2">Title</label>
+                <input
+                  type="text"
+                  id="blog-title"
+                  class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Enter blog post title"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Category</label>
+                <select
+                  id="blog-category"
+                  class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                >
+                  <option value="web-development">Web Development</option>
+                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="ai-technology">AI Technology</option>
+                  <option value="tips-tricks">Tips & Tricks</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium mb-2"
+                  >Tags (comma separated)</label
+                >
+                <input
+                  type="text"
+                  id="blog-tags"
+                  class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="react, javascript, tutorial"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2"
+                  >Reading Time (minutes)</label
+                >
+                <input
+                  type="number"
+                  id="blog-reading-time"
+                  class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="5"
+                  min="1"
+                />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Excerpt</label>
+              <textarea
+                id="blog-excerpt"
+                rows="3"
+                class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Brief description of your post..."
+              ></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2"
+                >Content (Markdown supported)</label
+              >
+              <div class="grid md:grid-cols-2 gap-4">
+                <textarea
+                  id="blog-content"
+                  rows="12"
+                  class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Write your blog content here... (Markdown supported)"
+                  required
+                ></textarea>
+                <div
+                  class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg p-4"
+                >
+                  <h4 class="font-medium mb-2">Preview</h4>
+                  <div
+                    id="blog-preview"
+                    class="prose prose-sm max-w-none blog-content text-gray-600 dark:text-gray-400"
+                  >
+                    Start typing to see preview...
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-4 justify-center">
+              <button
+                type="button"
+                onclick="toggleBlogForm()"
+                class="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onclick="saveDraft()"
+                class="px-6 py-3 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors"
+              >
+                Save Draft
+              </button>
+              <button
+                type="submit"
+                class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+              >
+                Publish Post
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Get In Touch
+          </h2>
+          <div class="w-24 h-1 bg-primary mx-auto"></div>
+          <p class="text-lg text-gray-600 dark:text-gray-400 mt-4">
+            Let's discuss your project or any questions you might have
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Contact Info -->
+          <div class="space-y-8">
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+              <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center"
+                  >
+                    <i class="fab fa-whatsapp text-green-500"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">WhatsApp</p>
+                    <a
+                      href="https://wa.me/8801611020002"
+                      target="_blank"
+                      class="text-primary hover:underline"
+                      >+880 1611 020002</a
+                    >
+                  </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"
+                  >
+                    <i class="fas fa-envelope text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">Email</p>
+                    <a
+                      href="mailto:anikshajol@gmail.com"
+                      class="text-primary hover:underline"
+                      >anikshajol@gmail.com</a
+                    >
+                  </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center"
+                  >
+                    <i class="fab fa-facebook text-blue-600"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">Facebook</p>
+                    <a
+                      href="https://www.facebook.com/anikshajol/"
+                      target="_blank"
+                      class="text-primary hover:underline"
+                      >facebook.com/anikshajol</a
+                    >
+                  </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center"
+                  >
+                    <i class="fab fa-instagram text-pink-500"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">Instagram</p>
+                    <a
+                      href="https://www.instagram.com/anikshajol/"
+                      target="_blank"
+                      class="text-primary hover:underline"
+                      >instagram.com/anikshajol</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Working Hours -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+              <h3 class="text-xl font-semibold mb-4">Working Hours</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span>Sunday - Thursday</span>
+                  <span class="text-green-600">9:00 AM - 6:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Friday</span>
+                  <span class="text-yellow-600">3:00 PM - 6:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Saturday</span>
+                  <span class="text-red-600">Closed</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div
+              class="bg-gradient-to-br from-primary to-accent p-6 rounded-xl text-white"
+            >
+              <h3 class="text-xl font-semibold mb-4">Quick Stats</h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center">
+                  <div class="text-2xl font-bold">24h</div>
+                  <div class="text-sm opacity-90">Response Time</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold">100%</div>
+                  <div class="text-sm opacity-90">Client Satisfaction</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enhanced Contact Form -->
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-semibold mb-6">Send Message</h3>
+            <form id="contact-form" class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium mb-2">Name *</label>
+                  <input
+                    type="text"
+                    name="name"
+                    class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium mb-2">Email *</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Your email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium mb-2">Phone</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Your phone number"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium mb-2"
+                    >Service Interested</label
+                  >
+                  <select
+                    name="service"
+                    class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="meta-ads">Meta Ads Management</option>
+                    <option value="ai-solutions">AI Solutions</option>
+                    <option value="content-writing">Content Writing</option>
+                    <option value="consulting">Digital Consulting</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2"
+                  >Budget Range</label
+                >
+                <select
+                  name="budget"
+                  class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                >
+                  <option value="">Select budget range</option>
+                  <option value="under-500">Under $500</option>
+                  <option value="500-1000">$500 - $1,000</option>
+                  <option value="1000-5000">$1,000 - $5,000</option>
+                  <option value="5000-plus">$5,000+</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Subject *</label>
+                <input
+                  type="text"
+                  name="subject"
+                  class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Message subject"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Message *</label>
+                <textarea
+                  name="message"
+                  rows="5"
+                  class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-lg font-semibold hover:from-primary-dark hover:to-accent transition-all duration-300 transform hover:scale-105"
+              >
+                Send Message <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <h3 class="text-2xl font-bold text-gradient mb-4">MD Anik Hasan</h3>
+            <p class="text-gray-400 mb-4">
+              Professional Full Stack Developer and Digital Marketing Expert.
+              Creating innovative solutions with modern technology to help
+              businesses grow and succeed.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.facebook.com/anikshajol/"
+                target="_blank"
+                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/anikshajol/"
+                target="_blank"
+                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                id="footer-linkedin"
+                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="mailto:anikshajol@gmail.com"
+                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a
+                href="https://wa.me/8801611020002"
+                target="_blank"
+                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Services</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="#services" class="hover:text-white transition-colors"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-white transition-colors"
+                  >Meta Ads</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-white transition-colors"
+                  >AI Solutions</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-white transition-colors"
+                  >Content Writing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="#about" class="hover:text-white transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="#portfolio" class="hover:text-white transition-colors"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="#blog" class="hover:text-white transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>
+            &copy; 2024 MD Anik Hasan. All rights reserved. | Designed with ❤️
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Enhanced Modals -->
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+      <div
+        class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl max-w-md w-full mx-4"
+      >
+        <div class="text-center">
+          <div
+            class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <i class="fas fa-check text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Success!</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6" id="success-message">
+            Operation completed successfully.
+          </p>
+          <button
+            onclick="closeModal('success-modal')"
+            class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors"
+          >
+            Got it!
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Project Modal -->
+    <div id="add-project-modal" class="modal">
+      <div
+        class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl max-w-2xl w-full mx-4 max-h-96 overflow-y-auto"
+      >
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-xl font-semibold">Add New Project</h3>
+          <button
+            onclick="closeModal('add-project-modal')"
+            class="text-gray-500 hover:text-gray-700"
+          >
+            <i class="fas fa-times text-xl"></i>
+          </button>
+        </div>
+        <form id="add-project-form" class="space-y-4">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium mb-2"
+                >Project Title</label
+              >
+              <input
+                type="text"
+                id="project-title"
+                class="w-full px-3 py-2 text-base rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800"
+                required
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Category</label>
+              <select
+                id="project-category"
+                class="w-full px-3 py-2 text-base rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800"
+              >
+                <option value="websites">Website</option>
+                <option value="meta-ads">Meta Ads</option>
+                <option value="ai-work">AI Project</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-2">Description</label>
+            <textarea
+              id="project-description"
+              rows="4"
+              class="w-full px-3 py-2 text-base rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800"
+              required
+            ></textarea>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium mb-2"
+                >Technologies/Skills</label
+              >
+              <input
+                type="text"
+                id="project-technologies"
+                class="w-full px-3 py-2 text-base rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800"
+                placeholder="React, Node.js, etc."
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2"
+                >Project URL (optional)</label
+              >
+              <input
+                type="url"
+                id="project-url"
+                class="w-full px-3 py-2 text-base rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800"
+              />
+            </div>
+          </div>
+          <div class="flex gap-4 justify-end">
+            <button
+              type="button"
+              onclick="closeModal('add-project-modal')"
+              class="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              class="px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark"
+            >
+              Add Project
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- LinkedIn Modal -->
+    <div id="linkedin-modal" class="modal">
+      <div
+        class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl max-w-md w-full mx-4"
+      >
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Add LinkedIn Profile</h3>
+          <div class="space-y-4">
+            <input
+              type="url"
+              id="linkedin-url"
+              class="w-full px-4 py-3 text-base rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800"
+              placeholder="https://linkedin.com/in/yourprofile"
+            />
+            <div class="flex gap-4">
+              <button
+                onclick="closeModal('linkedin-modal')"
+                class="flex-1 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+              >
+                Cancel
+              </button>
+              <button
+                onclick="saveLinkedIn()"
+                class="flex-1 px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+  </body>
+</html>

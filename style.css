@@ -1,0 +1,127 @@
+.gradient-bg {
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+}
+
+nav a {
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: black;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+}
+.typing-animation {
+  border-right: 2px solid #2563eb;
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #2563eb;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.text-gradient {
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.blog-content {
+  max-height: 300px;
+  overflow-y: auto;
+}
+.blog-content::-webkit-scrollbar {
+  width: 4px;
+}
+.blog-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.blog-content::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 2px;
+}
+.skills-progress {
+  position: relative;
+  overflow: hidden;
+}
+.skills-progress::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
